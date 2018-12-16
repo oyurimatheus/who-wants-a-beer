@@ -1,0 +1,12 @@
+requests
+flask
+flask-sqlalchemy
+flask-graphql
+graphql-core
+graphene
+graphene-sqlalchemy
+geojson
+shapely
+psycopg2
+PyHamcrest>=1.9.0
+geoalchemy2
