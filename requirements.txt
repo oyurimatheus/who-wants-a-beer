@@ -10,3 +10,4 @@ shapely
 psycopg2
 PyHamcrest>=1.9.0
 geoalchemy2
+pytest
