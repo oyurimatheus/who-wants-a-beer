@@ -1,0 +1,22 @@
+version: '3.4'
+services:
+    app:
+        image: oyurimatheus/whowantsabeer
+        container_name: app
+        ports:
+          - 5000:5000
+        depends_on:
+          - db
+        restart: on-failure
+        environment:
+          - DATABASE_NAME=whowantsabeer
+          - DATABASE_USER=app
+          - DATABASE_PASSWORD=app
+          - DATABASE_HOST=db
+    db:
+        database:
+        image: mdillon/postgis
+        environment:
+          - POSTGRES_PASSWORD=cuscuz
+          - POSTGRES_USER=beer_admin
+          - POSTGRES_DB=beer
