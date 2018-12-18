@@ -1,2 +1,2 @@
 python -m src.infra.create_db
-python -m src.infra.server
+python server.py
