@@ -4,6 +4,9 @@ from flask_graphql import GraphQLView
 from src.infra.database import db_session
 from src.delivery.schema import schema
 
+import os
+
+DEBUG = os.getenv('DEBUG', True)
 
 app = Flask(__name__)
 
@@ -15,4 +18,4 @@ def remove_session(exception=None):
     db_session.remove()
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=DEBUG)
