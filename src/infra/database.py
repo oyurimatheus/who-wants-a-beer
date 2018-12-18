@@ -8,7 +8,7 @@ import os
 
 DATABASE_USER = os.getenv('DATABASE_USER', 'app')
 DATABASE_PASSWORD = os.getenv('DATABASE_PASSWORD', 'app')
-DATABASE_HOST = os.getenv('DATABASE_HOST', '127.0.0.1')
+DATABASE_HOST = os.getenv('DATABASE_HOST', '172.16.0.2')
 DATABASE_PORT = os.getenv('DATABASE_PORT', '5432')
 DATABASE_NAME = os.getenv('DATABASE_NAME', 'whowantsabeer')
 
