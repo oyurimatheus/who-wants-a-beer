@@ -15,9 +15,8 @@ services:
           - DATABASE_HOST=db
           - DEBUG=False
     db:
-        database:
         image: mdillon/postgis
         environment:
-          - POSTGRES_PASSWORD=cuscuz
-          - POSTGRES_USER=beer_admin
-          - POSTGRES_DB=beer
+          - POSTGRES_PASSWORD=app
+          - POSTGRES_USER=app
+          - POSTGRES_DB=whowantsabeer
