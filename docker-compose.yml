@@ -13,6 +13,7 @@ services:
           - DATABASE_USER=app
           - DATABASE_PASSWORD=app
           - DATABASE_HOST=db
+          - DEBUG=False
     db:
         database:
         image: mdillon/postgis
