@@ -8,10 +8,9 @@ ADD requirements.txt ./
 ADD run.sh ./
 ADD ./server.py ./ 
 
-
 RUN pip install -r requirements.txt
 RUN mkdir src/
 RUN touch ./src/__init__.py
 COPY src ./src
 
-ENTRYPOINT /bin/bash run.sh
+ENTRYPOINT python server.py
