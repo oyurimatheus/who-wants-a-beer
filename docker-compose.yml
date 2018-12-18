@@ -12,11 +12,28 @@ services:
           - DATABASE_NAME=whowantsabeer
           - DATABASE_USER=app
           - DATABASE_PASSWORD=app
-          - DATABASE_HOST=db
+          - DATABASE_HOST=172.16.1.2
           - DEBUG=False
+        networks: 
+            beer:
+                ipv4_address: 172.16.1.3
     db:
         image: mdillon/postgis
         environment:
           - POSTGRES_PASSWORD=app
           - POSTGRES_USER=app
           - POSTGRES_DB=whowantsabeer
+        ports: 
+          - 5432:5432
+        networks: 
+            beer:
+                ipv4_address: 172.16.1.2
+
+networks:
+    beer:
+        driver: bridge
+        ipam:
+            driver: default
+            config:
+                - subnet: 172.16.1.0/24
+                
