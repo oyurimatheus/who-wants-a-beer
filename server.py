@@ -6,7 +6,7 @@ from src.delivery.schema import schema
 
 import os
 
-DEBUG = os.getenv('DEBUG', True)
+DEBUG = bool(os.getenv('DEBUG', True))
 
 app = Flask(__name__)
 
@@ -18,4 +18,4 @@ def remove_session(exception=None):
     db_session.remove()
 
 if __name__ == '__main__':
-    app.run(debug=DEBUG)
+    app.run(debug=DEBUG, host='0.0.0.0')
