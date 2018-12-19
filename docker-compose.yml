@@ -17,6 +17,7 @@ services:
         networks: 
             beer:
                 ipv4_address: 172.16.1.3
+        command: ["./wait-for-db.sh", "bash", "run.sh"]
     db:
         image: mdillon/postgis
         environment:
