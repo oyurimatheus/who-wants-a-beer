@@ -2,8 +2,8 @@ dev:
 	bash run-dev.sh
 
 prod:
-	bash run.sh
+	docker-compose up
 
 build:
 	docker image build -f Dockerfile -t oyurimatheus/whowantsabeer .
-	docker push oyurimatheus/whowantsabeer
+	docker push oyurimatheus/whowa  ntsabeer
